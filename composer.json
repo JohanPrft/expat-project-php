@@ -1,0 +1,13 @@
+{
+    "name": "johan/app_expat",
+    "authors": [
+        {
+            "name": "Johan Prft",
+            "email": "jojoman69100@gmail.com"
+        }
+    ],
+    "require": {
+        "components/jquery": "^3.7",
+        "ext-mysqli": "*"
+    }
+}
