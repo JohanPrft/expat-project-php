@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>    <title>Document</title>
+</head>
+<body>
+
+<form id="articleForm">
+    <h2>Formulaire de creation d'article</h2>
+
+    <div id="separator"></div>
+
+    <div class="label_error_field">
+        <label for="title">Titre: </label>
+        <span id="error_title"></span>
+    </div>
+    <input id="title" type="text" required value="Default title">
+
+    <div class="label_error_field">
+        <label for="category">Categorie: </label>
+        <span id="error_category"></span>
+    </div>
+    <select id="category" type="text">
+        <!--modify blank to a non-existing category to crate backend error verification-->
+        <option value=""></option>
+        <option value="emploi">Emploi</option>
+        <option value="immobilier">Immobilier</option>
+    </select>
+
+    <div class="label_error_field">
+        <label for="content">Contenu: </label>
+        <span id="error_content"></span>
+    </div>
+    <textarea id="content" required placeholder="Je recherche / J'offre ...">Default content field.</textarea>
+
+    <input id="submitButton" type="button" value="valider">
+</form>
+
+</body>
+<script src="script.js"></script>
+</html>
