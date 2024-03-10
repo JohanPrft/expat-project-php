@@ -43,16 +43,16 @@ function main ()
     $mysqli->close();
 }
 
+// insert article and category id in the table article_has_category
 function insertArticleHasCategory(int $insertedArticleId, int $categoryId) {
     global $mysqli;
 
     $stmt = $mysqli->prepare("INSERT INTO article_has_category (article_id, category_id) VALUES (?, ?)");
     $stmt->bind_param("ii", $insertedArticleId, $categoryId);
     $stmt->execute();
-
 }
 
-// return the category id, or 0 if it doesn't exist
+// get the categoryId from the db, return it (0 if it doesn't exist)
 function categoryId(): int {
     global $mysqli;
 
@@ -75,7 +75,7 @@ function hasCategory (): bool {
     return !empty($_POST['category']);
 }
 
-// return inserted article id, 0 if it fails
+// insert article in db, return inserted article id (0 if it fails)
 function insertArticle (): int
 {
     global $mysqli;
@@ -98,7 +98,7 @@ function insertArticle (): int
 }
 
 
-// check request method and values, then confirm or reject
+// check  http method and request values, return bool
 function check_request() : bool
 {
     $isRequestValid = true;

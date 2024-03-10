@@ -48,7 +48,7 @@ function handleForm () {
                 "category": category,
                 "content": content
             }
-            postData("../src/process_data.php", data);
+            postData("../../src/process_data.php", data);
         }
     })
 }
