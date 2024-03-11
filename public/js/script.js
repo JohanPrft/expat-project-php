@@ -49,6 +49,12 @@ function handleForm () {
                 "content": content
             }
             postData("../../src/process_data.php", data);
+            if (category.length === 0) {
+                window.location.href = 'articles.html';
+            }
+            else {
+                window.location.href = 'articles_filter.html?param=' + category;
+            }
         }
     })
 }

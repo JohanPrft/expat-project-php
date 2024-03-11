@@ -3,19 +3,19 @@
 }
 
 #articleForm {
-    max-width: 400px;
+    font-family: 'Arial', sans-serif; 
+
+    max-width: 600px;
     margin: 0 auto;
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
     background-color: #f9f9f9;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-
-    font-family: sans-serif;
 }
 
 h2 {
-    font-weight: lighter;
+    font-weight: 400;
     font-size: 24px;
     margin-bottom: 20px;
     text-align: center;
@@ -37,6 +37,7 @@ h2 {
 input, textarea, select {
     width: 100%;
     max-width: 100%;
+    min-width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;

@@ -6,21 +6,39 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>    <title>Document</title>
+    <link rel="stylesheet" href="../css/articles.css">
     <script type="module" src="../js/articles_filter.js"></script>
     <title>Document</title>
 </head>
 <body>
+    <header>
+        <h1>Liste d'articles</h1>
+    </header>
 
-<h1>Liste d'articles</h1>
-<label for="category">Categorie: </label>
-<select id="category" onchange="changeArticles()">
-    <!--modify blank to a non-existing category to crate backend error verification-->
-    <option value="emploi">Emploi</option>
-    <option value="immobilier">Immobilier</option>
-</select>
+    <main>
+        <div class="selectCategorie">
+            <label for="category"></label>
+            <select id="category" onchange="changeArticles()">
+                <!--modify blank to a non-existing category to crate backend error verification-->
+                <option id="emploi" value="emploi">Emploi</option>
+                <option id="immobilier" value="immobilier">Immobilier</option>
+            </select>            
+        </div>
 
-<div id="articles-block">
-</div>
-
+        <div id="articles-block">
+            <div class="article">
+                <h3>${article.title}</h3>
+                <span>id: ${article.id}</span>
+                <span>category: ${article.category_name}</span>
+                <p>${article.content}</p>
+            </div>
+            <div class="article">
+                <h3>${article.title}</h3>
+                <span>id: ${article.id}</span>
+                <span>category: ${article.category_name}</span>
+                <p>${article.content}</p>
+            </div>
+        </div>
+    </main>        
 </body>
 </html>
