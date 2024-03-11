@@ -19,26 +19,13 @@
         <div class="selectCategorie">
             <label for="category"></label>
             <select id="category" onchange="changeArticles()">
-                <!--modify blank to a non-existing category to crate backend error verification-->
                 <option id="emploi" value="emploi">Emploi</option>
                 <option id="immobilier" value="immobilier">Immobilier</option>
-            </select>            
+            </select>
         </div>
 
         <div id="articles-block">
-            <div class="article">
-                <h3>${article.title}</h3>
-                <span>id: ${article.id}</span>
-                <span>category: ${article.category_name}</span>
-                <p>${article.content}</p>
-            </div>
-            <div class="article">
-                <h3>${article.title}</h3>
-                <span>id: ${article.id}</span>
-                <span>category: ${article.category_name}</span>
-                <p>${article.content}</p>
-            </div>
         </div>
-    </main>        
+    </main>
 </body>
 </html>

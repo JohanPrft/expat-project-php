@@ -9,8 +9,8 @@ const error_contentElem = document.getElementById("error_content");
 
 document.addEventListener("DOMContentLoaded", handleForm);
 
-function handleForm () {
-    submitButtonElem.addEventListener("click", () => {
+async function handleForm () {
+    submitButtonElem.addEventListener("click", async () => {
         const title = titleInputElem.value.trim();
         const category = categoryInputElem.value.toLowerCase();
         const content = contentInputElem.value.trim();
@@ -25,8 +25,7 @@ function handleForm () {
         if (title_len < 5) {
             error_titleElem.textContent = "titre precis requis (>=5 char)";
             isDataValid = false;
-        }
-        else if (title_len > 80) {
+        } else if (title_len > 80) {
             error_titleElem.textContent = "titre trop long (>80 char)";
             isDataValid = false;
         }
@@ -35,8 +34,7 @@ function handleForm () {
         if (content_length < 10) {
             error_contentElem.textContent = "description precise requise (>=10 char)";
             isDataValid = false;
-        }
-        else if (content_length > 65535) {
+        } else if (content_length > 65535) {
             error_contentElem.textContent = "description trop longue (>65535 char)";
             isDataValid = false;
         }
@@ -48,7 +46,7 @@ function handleForm () {
                 "category": category,
                 "content": content
             }
-            postData("../../src/process_data.php", data);
+            await postData("../../src/process_data.php", data);
             if (category.length === 0) {
                 window.location.href = 'articles.html';
             }

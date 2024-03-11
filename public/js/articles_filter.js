@@ -1,9 +1,12 @@
 import {changeArticles} from "./articles.js";
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded",  () => {
     const selectElem = document.getElementById("category");
 
-    setSelectToQueryParam();
+    // if wrong query param redirect to full page
+    if (!setSelectToQueryParam()) {
+        return ;
+    }
     // article initialization
     changeArticles(selectElem.value);
     changePageOnSelectChange(selectElem);
@@ -21,6 +24,11 @@ function setSelectToQueryParam () {
     else if (param === 'immobilier') {
         document.getElementById('immobilier').setAttribute("selected", "")
     }
+    else {
+        console.error(`Wrong query param ${param}`)
+        return false;
+    }
+    return true;
 }
 
 // set a new href with selected value to update page content

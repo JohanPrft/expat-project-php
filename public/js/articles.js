@@ -38,11 +38,13 @@ function changeArticleDOM (articleArray) {
     articlesBlock.innerHTML = "";
 
     articleArray.forEach((article) => {
+
+        if (!article.category_name)
+            article.category_name = "aucune";
         let articleHtml = `
                         <div class="article">
                             <h3>${article.title}</h3>
-                            <span>id: ${article.id}</span>
-                            <span>category: ${article.category_name}</span>
+                            <span>Categorie: ${article.category_name}</span>
                             <p>${article.content}</p>
                         </div>
                     `;
