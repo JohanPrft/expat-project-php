@@ -1,0 +1,35 @@
+EXPAT.COM Mini project: article creation page and list
+BACK-END COMPETENCE ASSESSMENT TEST
+
+General Structure:
+article:
+    id = INT
+    title = VARCHAR(80)
+    content = TEXT
+
+article_has_category:
+    article_id = INT
+    category_id = INT
+
+category:
+    id = INT
+    name = VARCHAR(45)
+    description = VARCHAR(255)
+
+article -> article_has_category -> category
+
+Default Categories Data:
+    emploi: Job search and offers
+    immobilier: Real estate search and offers
+
+1) Create a migration script to create this structure and insert data into the category table -> input default data.
+2) Create a form page to create an article with a category (optional).
+    All fields (title and content) are mandatory except for the category.
+    Implement submission via Ajax, and display a small error message if the fields are not filled correctly.
+    Otherwise, redirect to the article list page of the selected category or to the list of all articles if no category is selected.
+3) Create a page for listing articles by category and a page for listing all articles.
+
+Note:
+Technologies to use: PHP 7.4, Composer, and MySQL (or MariaDB).
+
+Implement appropriate methods and patterns to develop the project (PSR, clean code).
