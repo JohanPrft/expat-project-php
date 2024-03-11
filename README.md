@@ -1,4 +1,4 @@
-# Back-End Competence Assessment Test - Expats.com
+# Back-End Competence Assessment Test - Expat.com
 
 This mini-project involves creating a web application for managing articles with categories. Below is an overview of what's included:
 
