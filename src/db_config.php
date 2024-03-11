@@ -5,4 +5,3 @@ $username = "root";
 $password = "";
 $database = "article-management-expat";
 $port = "3308";
-

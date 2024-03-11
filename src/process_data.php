@@ -144,6 +144,3 @@ function check_request() : bool
     }
     return $isRequestValid;
 }
-
-
-

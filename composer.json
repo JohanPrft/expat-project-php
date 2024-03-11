@@ -8,6 +8,7 @@
     ],
     "require": {
         "components/jquery": "^3.7",
-        "ext-mysqli": "*"
+        "ext-mysqli": "*",
+        "ext-json": "*"
     }
 }

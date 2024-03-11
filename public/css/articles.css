@@ -4,16 +4,21 @@
 
 body {
     font-family: 'Arial', sans-serif; 
-    margin: 0; 
-    padding: 0; 
-    background-color: #f5f5f5; 
+
+    margin: 0;
+    padding: 0;
+
+    background-color: #f5f5f5;
+
 }
 
 h1 {
-    background-color: #1c1c1c; 
-    color: #ffffff; 
-    text-align: center; 
-    padding: 40px; 
+    text-align: center;
+
+    color: #ffffff;
+    background-color: #1c1c1c;
+
+    padding: 40px;
     margin: 0; 
 }
 
@@ -23,7 +28,8 @@ main {
 } 
 
 .article {
-    background-color: #ffffff; 
+    background-color: #ffffff;
+
     /* x, y, blur */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
     padding: 20px; 
@@ -35,17 +41,18 @@ main {
     margin-top: 0;
 }
 
-.selectCategorie {    
-    padding: 10px; 
+.selectCategorie {
+    padding: 10px;
     margin: 10px;
 }
 
 .selectCategorie select {
-    padding: 8px;
     font-size: 16px;
+
+    width: 200px;
+    padding: 8px;
     border: 1px solid #aeaeae;
     border-radius: 5px;
-    width: 200px;
+
     cursor: pointer;
 }
-  

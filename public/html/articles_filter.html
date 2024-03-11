@@ -14,17 +14,16 @@
     <header>
         <h1>Liste d'articles</h1>
     </header>
-
     <main>
         <div class="selectCategorie">
             <label for="category"></label>
-            <select id="category" onchange="changeArticles()">
+            <select id="category">
                 <option id="emploi" value="emploi">Emploi</option>
                 <option id="immobilier" value="immobilier">Immobilier</option>
             </select>
         </div>
-
         <div id="articles-block">
+            <!-- will be filled with db values -->
         </div>
     </main>
 </body>

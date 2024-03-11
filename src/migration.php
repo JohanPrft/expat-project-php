@@ -1,10 +1,8 @@
 <?php
 // include db credentials
 require_once 'db_config.php';
-
 // connect php backend to db with mysqli
 $mysqli = new mysqli($servername, $username, $password, $database, $port);
-
 if ($mysqli->connect_error) {
     die("Connection failed: " . $mysqli->connect_error);
 }

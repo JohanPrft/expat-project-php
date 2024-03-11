@@ -12,14 +12,13 @@ echo json_encode($articles);
 function getArticles($filter)
 {
     require_once 'db_config.php';
-
     $mysqli = new mysqli($servername, $username, $password, $database, $port);
-
     if ($mysqli->connect_error) {
         die("Connection failed: " . $mysqli->connect_error);
     }
 
     $sql_filter = "";
+    // safe from injection because not directly put in the sql request
     switch ($filter) {
         case "emploi":
             $sql_filter = 'WHERE category.name = "emploi"';
@@ -28,7 +27,6 @@ function getArticles($filter)
             $sql_filter = 'WHERE category.name = "immobilier"';
             break;
     }
-
 
     // select : every article, and all name/description fields in category (var name: category/description_name)
     // specify primary table for modification
@@ -53,12 +51,9 @@ function getArticles($filter)
             $articles[] = $row;
         }
     } else {
-        // If the query failed, output an error message
         echo "Query failed: " . $mysqli->error;
     }
 
-    // Close the database connection
     $mysqli->close();
-
     return $articles;
 }

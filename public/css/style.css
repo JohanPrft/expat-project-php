@@ -3,13 +3,14 @@
 }
 
 #articleForm {
-    font-family: 'Arial', sans-serif; 
+    font-family: 'Arial', sans-serif;
 
     max-width: 600px;
     margin: 0 auto;
     padding: 20px;
-    border: 1px solid #ccc;
+
     border-radius: 5px;
+    border: 1px solid #ccc;
     background-color: #f9f9f9;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
@@ -17,19 +18,22 @@
 h2 {
     font-weight: 400;
     font-size: 24px;
-    margin-bottom: 20px;
     text-align: center;
+
+    margin-bottom: 20px;
 }
 
 #separator {
     margin: auto;
     width: 95%;
-    background-color: #ccc;
     height: 1px;
+
+    background-color: #ccc;
 }
 
 .label_error_field {
     display: block;
+
     margin-top: 15px;
     margin-bottom: 5px;
 }
@@ -51,10 +55,9 @@ textarea {
     width: 100%;
     padding: 10px;
     margin-top: 20px;
-    background-color: #007bff;
-    color: #fff;
     border: none;
     border-radius: 5px;
+
     cursor: pointer;
 }
 

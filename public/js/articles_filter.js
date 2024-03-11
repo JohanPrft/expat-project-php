@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded",  () => {
     if (!setSelectToQueryParam()) {
         return ;
     }
-    // article initialization
+    // initialization
     changeArticles(selectElem.value);
     changePageOnSelectChange(selectElem);
 });

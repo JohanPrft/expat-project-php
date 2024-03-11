@@ -4,14 +4,13 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // get and change the articles
-export function changeArticles(filter) {
-    getArticles(filter)
-        .done(function(response) {
-            changeArticleDOM(response);
-        })
-        .fail(function(error) {
-            console.error('Error:', error);
-        });
+export async function changeArticles(filter) {
+    try {
+        const response = await getArticles(filter);
+        changeArticleDOM(response);
+    } catch (error) {
+        console.error('Error:', error);
+    }
 }
 
 // get articles from db, filter can be blank or corresponding to a category value
