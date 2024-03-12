@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded",  () => {
 
     // if wrong query param redirect to full page
     if (!setSelectToQueryParam()) {
+        window.location.href = 'articles.html';
         return ;
     }
     // initialization

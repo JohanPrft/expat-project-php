@@ -61,10 +61,6 @@ textarea {
     cursor: pointer;
 }
 
-#submitButton:hover {
-    background-color: #0056b3;
-}
-
 .label_error_field span{
     color: #ff0000;
 }
