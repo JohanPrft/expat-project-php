@@ -24,5 +24,6 @@ This mini-project involves creating a web application for managing articles with
 ## How to Run
 1. Start a XAMPP web server for the correct PHP version (used: 7.4.33)
 2. Clone the repository.
-3. Execute the migration script to create database tables and initial data.
-4. Run the PHP application using a local server.
+3. Through a web browser:
+    4. Execute the migration script to create database tables and initial data with migration.php.
+    5. Run the PHP application with index.html.
